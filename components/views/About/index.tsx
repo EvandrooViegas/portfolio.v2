@@ -38,7 +38,7 @@ export default function About() {
         </ul>
       </div>
       <div className="relative  md:w-[500px] md:h-[500px] h-[300px] w-[300px] ">
-      <AnimatedElement animate={{  opacity: [0, 1] }}  >
+      <AnimatedElement animate={{  opacity: [0, 1] }}  animateOnce>
 
         <Image
           fill
