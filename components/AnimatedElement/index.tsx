@@ -20,8 +20,9 @@ export default function AnimatedElement<T extends keyof ReactHTML>(
     children,
     element = "div",
     animateOnView = true,
-    animateOnce = true,
-    animate,
+    animateOnce = false,
+    animate = { opacity: [0, 1], transition: { duration: 0.7 } },
+    initial,
     intersectionOptions,
     ...rest
   } = props;
@@ -48,6 +49,7 @@ export default function AnimatedElement<T extends keyof ReactHTML>(
     <Motion
       {...rest}
       ref={ref}
+      initial={initial ? initial : { opacity: 0 }}
       animate={animation}
     >
       {children}

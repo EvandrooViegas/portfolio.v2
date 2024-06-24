@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/carousel";
 import projects from "./data";
 import Image from "next/image";
+import AnimatedElement from "@/components/AnimatedElement";
 export default function Projects() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -40,8 +41,13 @@ export default function Projects() {
         width={800}
         src={element}
       />
+       <AnimatedElement>
+
       <SectionTitle black>PROJECTS</SectionTitle>
+       </AnimatedElement>
       <div>
+      <AnimatedElement>
+
         <Carousel opts={{ loop: true }} setApi={setApi} className="w-full max-w-96 md:max-w-full p-8">
           <CarouselContent>
             {projects.map((project, index) => (
@@ -80,6 +86,7 @@ export default function Projects() {
           Slide {current} of {count}
         </div>
         </Carousel>
+      </AnimatedElement>
       
       </div>
     </Container>
