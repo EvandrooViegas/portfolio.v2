@@ -3,6 +3,7 @@ import "@/app/index.css"
 import { Bebas_Neue } from "next/font/google"
  
 import { cn } from "@/lib/utils"
+import { Metadata } from "next"
  
 const fontSans = Bebas_Neue({
   subsets: ["latin"],
@@ -10,6 +11,13 @@ const fontSans = Bebas_Neue({
   weight: "400"
 })
 
+export const metadata: Metadata = {
+  title: "| Evandro Viegas's Portfolio",
+  description: "Evandro Viegas Portfolio",
+icons: {
+  icon: "/icon.png"
+}
+}
  
 export default function RootLayout({ children }: { 
   children: React.ReactNode
@@ -18,6 +26,7 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
+      <link rel="icon" href="/icon.png" sizes="any" />
       <body
         className={cn(
           "min-h-screen bg-background font-sans text-black antialiased",

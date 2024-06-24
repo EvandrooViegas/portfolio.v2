@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 export default function Contact() {
   return (
-    <Container className="bg-secondary text-white overflow-hidden" padding={false}>
+    <Container className="bg-secondary text-white overflow-hidden" padding={false} >
       <div className="flex flex-col justify-between">
         <div className="grayscale  ">
           <video controls={false} loop autoPlay muted>
@@ -12,7 +12,7 @@ export default function Contact() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="h-full ">
+        <div className="h-full " id="contact">
           <div className="p-12 md:grid md:grid-cols-4">
             <a href="mailto:evandropkviegas@gmail.com" className="col-span-3 text-8xl animate-pulse underline" target="_blank">CONTACT ME!</a>
             <div className="space-y-4 text-3xl md:text-md">
