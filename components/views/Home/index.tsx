@@ -9,7 +9,7 @@ import AnimatedElement from "@/components/AnimatedElement";
 import { MdOutlineMail } from "react-icons/md";
 export default function Home() {
   return (
-    <div className="flex  flex-col-reverse md:grid md:grid-rows-1 md:grid-cols-5 h-screen overflow-hidden max-h-screen ">
+    <div className="flex   md:grid md:grid-rows-1 md:grid-cols-5 h-screen overflow-hidden max-h-screen ">
       <Image
         src={element}
         fill
@@ -20,7 +20,7 @@ export default function Home() {
         <Container
           center={false}
           full={false}
-          className="flex flex-col justify-between h-full"
+          className="flex flex-col md:justify-between justify-center gap-16 md:gap-0 h-full"
         >
           <div className="hidden md:block" />
           <div className="text-center md:text-left">
@@ -59,7 +59,7 @@ export default function Home() {
           </AnimatedElement>
         </Container>
       </div>
-      <div className="col-span-2 bg-secondary  h-full">
+      <div className="col-span-2 bg-secondary  h-full hidden md:inline">
         <div className="h-full  flex flex-col justify-end">
           <div className="relative h-full">
             <AnimatedElement animateOnce>
@@ -67,7 +67,7 @@ export default function Home() {
                 src={me}
                 fill
                 alt="Evandro Viegas"
-                className="md:object-contain object-contain  object-bottom"
+                className="object-contain   object-bottom"
               />
             </AnimatedElement>
           </div>

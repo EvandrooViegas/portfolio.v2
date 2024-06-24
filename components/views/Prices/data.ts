@@ -8,7 +8,7 @@ const prices = [
   {
     title: "MULTIPLE PAGE WEBSITE",
     description:
-      "A landing page website is a type of website focused on a single page designed to achieve a specific goal, such as promoting a product, capturing leads, or encouraging visitors to take a specific action like signing up for a newsletter or making a purchase.",
+      "A multiple page website is a type of website that consists of several different web pages, each with its own unique content and purpose. These pages are linked together through a navigation menu, allowing visitors to easily move from one page to another. For example, a typical business website might have separate pages for the home page, about us, services, products, and contact information.",
 
     price: "55$ - 150$",
   },
