@@ -3,21 +3,21 @@ const prices = [
     title: "LANDING PAGE ( 1 PAGE )",
     description:
       "A landing page website is a type of website focused on a single page designed to achieve a specific goal, such as promoting a product, capturing leads, or encouraging visitors to take a specific action like signing up for a newsletter or making a purchase.",
-    price: "10$ - 20$",
+    price: "50$ - 100$",
   },
   {
     title: "MULTIPLE PAGE WEBSITE",
     description:
       "A multiple page website is a type of website that consists of several different web pages, each with its own unique content and purpose. These pages are linked together through a navigation menu, allowing visitors to easily move from one page to another. For example, a typical business website might have separate pages for the home page, about us, services, products, and contact information.",
 
-    price: "20$ - 50$",
+    price: "100$ - 250$",
   },
 
   {
     title: "WEB APP",
     description:
       "A web app, or web application, is a software program that you can use through a web browser. Unlike traditional software that you have to install on your computer, a web app runs on a web server and is accessed over the internet.",
-      price: "+ 50$",
+      price: "+ 250$",
   },
 ];
 
