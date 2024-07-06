@@ -5,11 +5,12 @@ import Image from "next/image";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedElement from "@/components/AnimatedElement";
 const about = [
-  "BIRTHDAY: 22 JUNE 2006",
+  "BIRTHDAY: 22 JUNE 2005",
   "EMAIL: EVANDROPKVIEGAS@GMAIL.COM",
   "PHONE: +351967842074",
-  "FROM: ANGOLA",
-  "RESIDING IN: PORTUGAL",
+  "NACIONALITY: ANGOLA",
+  "LIVING IN: UNITED STATS",
+  "LANGUAGES: ENGLISH, FRENCH, PORTUGUESE",
   "EXPERIENCE: +7 YEARS",
 ];
 export default function About() {
