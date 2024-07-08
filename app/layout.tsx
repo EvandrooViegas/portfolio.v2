@@ -18,7 +18,7 @@ icons: {
   icon: "/icon.png"
 }
 }
- 
+export const formLink = "https://tally.so/r/woOAGe"
 export default function RootLayout({ children }: { 
   children: React.ReactNode
 

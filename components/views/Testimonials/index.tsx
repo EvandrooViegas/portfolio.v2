@@ -12,14 +12,15 @@ export default function Testimonials() {
   
     
       <AnimatedElement animate={{ x: [-40, 0], opacity: [0, 1] }}>
-        <SectionTitle  className="md:text-left md:w-full ">
-          TESTIMONIALS:
+        <SectionTitle background black className="md:text-left md:w-full ">
+          TESTIMONIALS
         </SectionTitle>
       </AnimatedElement>
       <div className="md:grid md:grid-cols-3 md:gap-12  gap-16 flex flex-col md:items-start items-center ">
         {testimonials.map((t, idx) => (
           <AnimatedElement
             element="div"
+            
             animate={{
               opacity: [0, 1],
               y: [-200 * (idx + 2) * 0.1, 0],

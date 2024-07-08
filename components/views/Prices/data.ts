@@ -7,11 +7,9 @@ const prices = [
       "3 Months Support",
       "Integrated Form",
       "Animations",
-      "Free Domain + Hosting Setup and management",
       "Light/Dark Mode",
     ],
-    price: "150$",
-    maintenance: 15,
+    price: "175$",
   },
   {
     title: "ADVANCED",
@@ -26,11 +24,10 @@ const prices = [
 
     ],
     price: "350$",
-    maintenance: 35,
   },
 
   {
-    title: "ENTERPISE",
+    title: "ENTERPRISE",
     features: [
       "All Previous Features",
       "Payment Processing",
@@ -42,7 +39,7 @@ const prices = [
 
     ],
     price: "750$",
-    maintenance: 50,
+
   },
 ];
 

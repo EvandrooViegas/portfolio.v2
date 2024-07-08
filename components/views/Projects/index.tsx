@@ -57,6 +57,7 @@ export default function Projects() {
               />
               </a>
               <span className="font-semibold text-3xl">{project.name}</span>
+              <p className="text-zinc-500 text-lg ">{project.description}</p>
               <div className="flex items-center gap-2 opacity-25 group-hover:opacity-90">
                 <a
                   href={project.website_url}
@@ -73,7 +74,6 @@ export default function Projects() {
                   <FaGithub />
                 </a>
               </div>
-              <p className="text-zinc-500 text-lg ">{project.description}</p>
             </div>
           ))}
         </AnimatedElement>

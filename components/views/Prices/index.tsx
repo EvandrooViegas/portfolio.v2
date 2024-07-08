@@ -6,6 +6,7 @@ import AnimatedElement from "@/components/AnimatedElement";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import { IoMdArrowForward } from "react-icons/io";
+import { formLink } from "@/app/layout";
 export default function Prices() {
   return (
     <Container
@@ -29,30 +30,33 @@ export default function Prices() {
                 transition: { duration: 0.2 },
               }}
               key={price.title}
-              className="flex flex-col  gap-6  w-full"
+              className="flex flex-col gap-3  w-full mb-auto p-12 border border-secondary/20 text-black"
             >
-              <p className="text-5xl underline font-bold text-neutral-800">STARTING AT {price.price}</p>
-              <span className="text-7xl font-black">{"> "}{price.title}</span>
-              <ul className="space-y-2">
+              <p className="text-8xl   font-bold text-neutral-800">{price.price}</p>
+              <span  className=" text-8xl   font-semibold">{price.title}</span>
+              <ul className="space-y-2 w-full">
                 {price.features.map((f) => (
                   <li
-                    className="flex items-center gap-1.5  border border-secondary/20 text-2xl"
+                    className="flex items-center gap-2  border-b border-b-secondary/20 text-2xl "
                     key={f}
                   >
-                    <span className="border-r border-r-secondary/20 p-4 text-secondary">
+                    <span className="p-4 text-black">
                       <IoCheckmarkSharp />
                     </span>
                     <span className="p-4">{f}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-2xl text-neutral-700">Maintenance {price.maintenance}$/mo</p>
-              <Button
-                className="w-full mt-3 group  md:w-fit md:mt-0 flex items-center gap-4 py-5"
+
+            <a href={formLink} target="_blank" className="w-full">
+            <Button
+            variant="color"
+                className="w-full mt-3 group  md:mt-0 flex items-center gap-4 py-5 font-white text-3xl"
               >
                 <span>CHOOSE THIS PLAN</span>
                 <span className="transition-all -rotate-45 group-hover:rotate-0"><IoMdArrowForward /></span>
               </Button>
+            </a>
             </AnimatedElement>
           ))}
         </div>

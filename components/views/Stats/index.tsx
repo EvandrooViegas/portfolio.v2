@@ -18,7 +18,7 @@ export default function Stats() {
        className="relative bg-white z-[1] text-black  flex flex-col gap-12 overflow-hidden text-center  "
     >
         <AnimatedElement animate={{ x: [-40, 0], opacity: [0, 1] }}>
-        <SectionTitle black>
+        <SectionTitle black background>
           MY CURRENT STATS
         </SectionTitle>
       </AnimatedElement>
@@ -34,9 +34,9 @@ export default function Stats() {
             className="h-full"
             key={s.name}
           >
-            <div className="flex flex-col gap-2 group text-center p-8 border border-secondary/20 h-full justify-center items-center">
+            <div className="flex flex-col gap-2 group text-center p-8 border border-secondary/20 h-full justify-center items-center ">
                 <CountUp end={s.value} enableScrollSpy prefix="+" className="text-8xl font-extrabold"  />
-                  <span className="font-semibold text-4xl">{s.name}</span>
+                  <span className="font-semibold text-4xl text-color">{s.name}</span>
                   <p className="text-zinc-500 text-xl">{s.description}</p>
                 </div>
           </AnimatedElement>

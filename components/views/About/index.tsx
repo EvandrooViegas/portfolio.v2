@@ -16,7 +16,7 @@ export default function About() {
       full={false}
       className=" bg-secondary text-white  justify-between flex md:flex-row flex-col-reverse gap-12 "
     >
-      <div className="space-y-12  full  p-12 border border-white/20">
+      <div className="space-y-12  full  p-12 border border-white/20 ">
         <AnimatedElement >
           <SectionTitle
           background
@@ -41,12 +41,12 @@ export default function About() {
         </ul>
       </div>
       <div className="md:flex md:justify-end  ">
-      <AnimatedElement animate={{  opacity: [0, 1] }}  animateOnce className="relative md:w-[500px] md:h-[500px] aspect-square w-full">
+      <AnimatedElement animate={{  opacity: [0, 1] }}  animateOnce className="relative md:w-[500px] md:h-[500px] aspect-square w-full ">
 
         <Image
           fill
           alt="Evandro"
-          className=" object-contain max-w-[500px] max-h-[500px] mx-auto my-auto "
+          className="rounded-xl object-contain max-w-[500px] max-h-[500px] mx-auto my-auto "
           src={me}
         />
       </AnimatedElement>

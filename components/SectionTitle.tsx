@@ -24,7 +24,7 @@ export default function SectionTitle(
       ${
         background
           ? black
-            ? "px-12 py-4 bg-white text-secondary"
+            ? "px-12 py-4 bg-color text-white"
             : "px-12 py-4  bg-secondary text-white"
           : ""
       }
