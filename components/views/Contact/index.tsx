@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 export default function Contact() {
   return (
@@ -18,19 +18,21 @@ export default function Contact() {
             <div className="space-y-4 text-3xl md:text-md">
               <span className="underline">CONTACT</span>
               <ul>
-                <li>+351967842074</li>
                 <li>
                   <a href="mailto:evandropkviegas@gmail.com" className="underline">
                     evandropkviegas@gmail.com
                   </a>
                 </li>
               </ul>
-              <ul className="flex items-center gap-1.5 ">
+              <ul className="flex items-center gap-3 ">
                 <a href="https://github.com/EvandrooViegas" target="_blank">
                   <FaGithub />
                 </a>
                 <a href="https://www.instagram.com/evandroviegas.dev/" target="_blank">
                   <FaInstagram />
+                </a>
+                <a href="https://www.linkedin.com/in/evandro-viegas-0a6ba5312/" target="_blank">
+                  <FaLinkedin />
                 </a>
               </ul>
             </div>

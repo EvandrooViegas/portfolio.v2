@@ -16,6 +16,7 @@ import {
 import projects from "./data";
 import Image from "next/image";
 import AnimatedElement from "@/components/AnimatedElement";
+import SectionSubtitle from "@/components/SectionSubtitle";
 export default function Projects() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -34,60 +35,48 @@ export default function Projects() {
     });
   }, [api]);
   return (
-    <Container  className="gap-4 flex flex-col relative overflow-hidden">
+    <Container className="gap-28 flex flex-col relative overflow-hidden">
       <Image
         alt="Element"
         className="absolute left-0 top-0 rotate-90 -translate-y-1/2 z-[-1]"
         width={800}
         src={element}
       />
-       <AnimatedElement>
-
-      <SectionTitle black>PROJECTS</SectionTitle>
-       </AnimatedElement>
+        <SectionTitle  background className="w-full md:w-fit text-8xl font-black text-center">
+          BEST OF MY PROJECTS
+        </SectionTitle>
       <div>
-      <AnimatedElement>
-
-        <Carousel opts={{ loop: true }} setApi={setApi} className="w-full max-w-96 md:max-w-full p-8">
-          <CarouselContent>
-            {projects.map((project, index) => (
-              <CarouselItem key={index} className="md:basis-1/3">
-                <div className=" space-y-2 group">
-                  <img
-                    alt="Project Image"
-                    src={`/projects/${project.image}`}
-                    className="aspect-video mb-4 object-cover grayscale group-hover:grayscale-0"
-                  />
-                  <span className="font-semibold text-3xl">{project.name}</span>
-                  <div className="flex items-center gap-2 opacity-25 group-hover:opacity-90">
-                    <a
-                      href={project.website_url}
-                      className="cursor-pointer"
-                      target="_blank"
-                    >
-                      <FaLink />
-                    </a>
-                    <a
-                      href={project.github_url}
-                      className="cursor-pointer"
-                      target="_blank"
-                    >
-                      <FaGithub />
-                    </a>
-                  </div>
-                  <p className="text-zinc-500 ">{project.description}</p>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-          <div className="pb-12 text-center text-sm text-muted-foreground">
-          Slide {current} of {count}
-        </div>
-        </Carousel>
-      </AnimatedElement>
-      
+        <AnimatedElement className="md:grid md:grid-cols-3 flex flex-col justify-between gap-12">
+          {projects.map((project) => (
+            <div className=" space-y-2 group p-5 border border-secondary/30" key={project.name}>
+              <a href={project.website_url} target="_blank">
+              <img
+                alt="Project Image"
+                src={`/projects/${project.image}`}
+                className="aspect-video mb-4 object-cover transition-all cursor-pointer grayscale group-hover:grayscale-0 p-0 group-hover:p-1 border border-transparent group-hover:border-secondary/30"
+              />
+              </a>
+              <span className="font-semibold text-3xl">{project.name}</span>
+              <div className="flex items-center gap-2 opacity-25 group-hover:opacity-90">
+                <a
+                  href={project.website_url}
+                  className="cursor-pointer"
+                  target="_blank"
+                >
+                  <FaLink />
+                </a>
+                <a
+                  href={project.github_url}
+                  className="cursor-pointer"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </a>
+              </div>
+              <p className="text-zinc-500 text-lg ">{project.description}</p>
+            </div>
+          ))}
+        </AnimatedElement>
       </div>
     </Container>
   );

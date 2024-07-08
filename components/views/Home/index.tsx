@@ -7,15 +7,11 @@ import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedElement from "@/components/AnimatedElement";
 import { MdOutlineMail } from "react-icons/md";
+import { IoMdArrowForward } from "react-icons/io";
 export default function Home() {
   return (
     <div className="flex   md:grid md:grid-rows-1 md:grid-cols-5 h-screen overflow-hidden max-h-screen ">
-      <Image
-        src={element}
-        fill
-        alt="Evandro Viegas"
-        className="z-[-1] hidden md:inline absolute top-0  left-0 -translate-y-1/2 -translate-x-1/2 "
-      />
+
       <div className="md:col-span-3">
         <Container
           center={false}
@@ -23,22 +19,18 @@ export default function Home() {
           className="flex flex-col md:justify-between justify-center gap-16 md:gap-0 h-full"
         >
           <div className="hidden md:block" />
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left space-y-6">
             <AnimatedElement animateOnView>
-              <SectionTitle shadow={false} black>
-                <span>HELLO{","}</span>
-                <br className="md:hidden inline" />
-                <span className="underline"> I{"'"}M EVANDRO</span>
+              <SectionTitle shadow={false} black className="leading-none md:text-8xl">
+                DO YOU NEED A <span className="text-secondary">WEBSITE</span> FOR YOURSELF OR FOR YOUR <span className="text-secondary">BUSINESS?</span>
               </SectionTitle>
             </AnimatedElement>
             <AnimatedElement
               element="p"
               animate={{ opacity: [0, 1], transition: { delay: 0.3 } }}
-              className="md:text-3xl "
+              className="md:text-3xl text-neutral-800 "
             >
-              I am a professional full-stack web developer, I specialize in
-              creating all kind of websites: from simple and modern to complex
-              and optimized websites, having more than 6 years of exprience
+              Then you are in the <span className="underline">right place</span>
             </AnimatedElement>
           </div>
           <AnimatedElement
@@ -48,18 +40,20 @@ export default function Home() {
               transition: { delay: 0.7 },
             }}
           >
-              <a href="#contact">
-            <Button className="w-full mt-3  md:w-fit md:mt-0 bg-black flex items-center gap-3">
-                <span>CONTACT ME</span>
-                <span>
-                  <MdOutlineMail />
-                </span>
-            </Button>
-              </a>
+            <a href="#contact">
+              <Button
+                size={"lg"}
+                variant="secondary"
+                className="w-full mt-3 group  md:w-fit md:mt-0 flex items-center gap-4"
+              >
+                <span>ORDER ONE</span>
+                <span className="transition-all -rotate-45 group-hover:rotate-0"><IoMdArrowForward /></span>
+              </Button>
+            </a>
           </AnimatedElement>
         </Container>
       </div>
-      <div className="col-span-2 bg-secondary  h-full hidden md:inline">
+      <div className="col-span-2  h-full hidden md:inline border-l border-l-secondary/30">
         <div className="h-full  flex flex-col justify-end">
           <div className="relative h-full">
             <AnimatedElement animateOnce>

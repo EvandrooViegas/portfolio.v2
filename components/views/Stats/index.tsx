@@ -18,11 +18,11 @@ export default function Stats() {
        className="relative bg-white z-[1] text-black  flex flex-col gap-12 overflow-hidden text-center  "
     >
         <AnimatedElement animate={{ x: [-40, 0], opacity: [0, 1] }}>
-        <SectionTitle shadow={false} className=" w-full underline text-center " black>
-          MY CURRENT STATS:
+        <SectionTitle black>
+          MY CURRENT STATS
         </SectionTitle>
       </AnimatedElement>
-      <div className="md:grid md:grid-cols-4 md:gap-12  gap-16 flex flex-col  ">
+      <div className="grid md:grid-cols-4 md:gap-12  gap-6 grid-cols-2 ">
         {stats.map((s, idx) => (
           <AnimatedElement
             element="div"
@@ -31,9 +31,10 @@ export default function Stats() {
               y: [-200 * (idx + 2) * 0.1, 0],
               transition: { duration: 1 },
             }}
+            className="h-full"
             key={s.name}
           >
-            <div className="flex flex-col gap-2 group text-center">
+            <div className="flex flex-col gap-2 group text-center p-8 border border-secondary/20 h-full justify-center items-center">
                 <CountUp end={s.value} enableScrollSpy prefix="+" className="text-8xl font-extrabold"  />
                   <span className="font-semibold text-4xl">{s.name}</span>
                   <p className="text-zinc-500 text-xl">{s.description}</p>

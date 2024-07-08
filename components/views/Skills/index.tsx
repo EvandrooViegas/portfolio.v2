@@ -12,7 +12,7 @@ import AnimatedElement from "@/components/AnimatedElement";
 
 export default function Skills() {
   return (
-    <Container className="bg-secondary text-white flex flex-col gap-12 border-t border-t-white/10">
+    <Container full={false} className="bg-secondary text-white flex flex-col gap-12 border-t border-t-white/10">
       <AnimatedElement>
         <SectionTitle shadow={false}>SKILLS</SectionTitle>
       </AnimatedElement>
@@ -35,20 +35,13 @@ export default function Skills() {
           <AnimatedElement
             animate={{ y: [30, 0], opacity: [0, 1] }}
             element="ul"
-            className="flex flex-wrap md:items-center justify-center gap-6 md:gap-12"
+            className="flex flex-wrap md:grid md:grid-cols-5 md:items-center justify-center gap-6 md:gap-8"
           >
             {skills.extras.map((s) => (
-              <HoverCard key={s.skill}>
-                <HoverCardTrigger>
-                  <li className="cursor-pointer text-2xl md:text-md">
+                  <li className="cursor-pointer text-2xl md:text-md" key={s.skill}>
                     <span>{s.skill}</span>
-                    <span className="inline md:hidden text-neutral-400">{` - ${s.value}/100`}</span>
+                    <span className=" text-neutral-400">{` - ${s.value}/100`}</span>
                   </li>
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  <Progress value={s.value} />
-                </HoverCardContent>
-              </HoverCard>
             ))}
           </AnimatedElement>
         </div>

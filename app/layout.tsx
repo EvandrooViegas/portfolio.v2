@@ -12,7 +12,7 @@ const fontSans = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
-  title: "| Evandro Viegas's Portfolio",
+  title: "Evandro Viegas's Portfolio",
   description: "Evandro Viegas Portfolio",
 icons: {
   icon: "/icon.png"
