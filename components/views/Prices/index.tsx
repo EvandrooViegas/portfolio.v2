@@ -13,11 +13,8 @@ export default function Prices() {
       full={false}
       className="flex flex-col  gap-28 relative overflow-hidden"
     >
-  
       <AnimatedElement className="">
-        <SectionTitle  background >
-          PRICES & COSTS
-        </SectionTitle>
+        <SectionTitle background>PRICES & COSTS</SectionTitle>
       </AnimatedElement>
       <div className="flex flex-col gap-24 w-full">
         <div className="md:grid md:grid-cols-3 flex flex-col items-center gap-16 h-full grow">
@@ -30,10 +27,20 @@ export default function Prices() {
                 transition: { duration: 0.2 },
               }}
               key={price.title}
-              className="flex flex-col gap-3  w-full mb-auto p-12 border border-secondary/20 text-black"
+              className="flex flex-col items-center  w-full mb-auto  text-black"
             >
-              <p className="text-8xl   font-bold text-neutral-800">{price.price}</p>
-              <span  className=" text-8xl   font-semibold">{price.title}</span>
+             <div className="border border-secondary/20 border-b-0">
+             <div className="p-12 flex flex-col items-center border-b border-b-secondary/20">
+                <p className="text-8xl   font-bold text-neutral-800">
+                  {price.price}
+                </p>
+                <span className=" text-8xl   font-semibold">{price.title}</span>
+
+                <p className="text-xl font-semibold mt-6   text-neutral-800 font-lato text-center mb-12">
+                  {price.description}
+                </p>
+              </div>
+
               <ul className="space-y-2 w-full">
                 {price.features.map((f) => (
                   <li
@@ -47,16 +54,19 @@ export default function Prices() {
                   </li>
                 ))}
               </ul>
+             </div>
 
-            <a href={formLink} target="_blank" className="w-full">
-            <Button
-            variant="color"
-                className="w-full mt-3 group  md:mt-0 flex items-center gap-4 py-5 font-white text-3xl"
-              >
-                <span>CHOOSE THIS PLAN</span>
-                <span className="transition-all -rotate-45 group-hover:rotate-0"><IoMdArrowForward /></span>
-              </Button>
-            </a>
+              <a href={formLink} target="_blank" className="w-full mt-6">
+                <Button
+                  variant="color"
+                  className="w-full mt-3 group  md:mt-0 flex items-center gap-4 py-5 font-white text-3xl"
+                >
+                  <span>CHOOSE THIS PLAN</span>
+                  <span className="transition-all -rotate-45 group-hover:rotate-0">
+                    <IoMdArrowForward />
+                  </span>
+                </Button>
+              </a>
             </AnimatedElement>
           ))}
         </div>
