@@ -17,7 +17,7 @@ export default function Container(props: Props) {
   } = props;
   return (
     <section
-      className={`${padding ? "md:p-20 p-12" : ""} ${
+      className={`${padding ? "md:p-20 p-6" : ""} ${
         center ? "flex justify-center items-center" : ""
       } 
       ${full ? "min-h-screen" : ""}  

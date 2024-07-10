@@ -29,7 +29,7 @@ export default function Home() {
             <AnimatedElement
               element="p"
               animate={{ opacity: [0, 1], transition: { delay: 0.3 } }}
-              className="md:text-5xl text-neutral-800 "
+              className="md:text-5xl text-2xl text-neutral-800 "
             >
               Then you are in the <span className="underline">right place</span>
             </AnimatedElement>
@@ -45,7 +45,7 @@ export default function Home() {
               <Button
                 size={"lg"}
                 variant="color"
-                className="w-full mt-3 group  md:w-fit md:mt-0 flex items-center gap-4 "
+                className="w-full mt-3 group text-3xl md:text-5xl  md:w-fit md:mt-0 flex items-center gap-4 "
               >
                 <span>ORDER ONE</span>
                 <span className="transition-all -rotate-45 group-hover:rotate-0"><IoMdArrowForward /></span>

@@ -34,7 +34,7 @@ export default function Stats() {
           MY CURRENT STATS
         </SectionTitle>
       </AnimatedElement>
-      <div className="grid md:grid-cols-4 md:gap-12  gap-6 grid-cols-2 ">
+      <div className="grid md:grid-cols-4 md:gap-12  gap-6 ">
         {stats.map((s, idx) => (
           <AnimatedElement
             element="div"

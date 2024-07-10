@@ -6,7 +6,7 @@ export default function SectionTitle(
     children: React.ReactNode;
     shadow?: boolean;
     background?: boolean;
-    subtitle?: string;
+  
   } & React.HTMLAttributes<HTMLSpanElement>
 ) {
   const {
@@ -15,20 +15,21 @@ export default function SectionTitle(
     shadow = false,
     background = false,
     className,
-    subtitle,
+
   } = props;
   return (
     <span
-      className={`${black ? "text-black" : "text-white"} 
+      className={`
+      ${black ? "text-black" : "text-white"} 
       ${shadow ? "text-shadow" : ""}  
       ${
         background
           ? black
-            ? "px-12 py-4 bg-color text-white"
-            : "px-12 py-4  bg-secondary text-white"
+            ? "md:px-12 px-1 md:py-4 bg-color text-white"
+            : "md:px-12 px-1 md:py-4  bg-secondary text-white"
           : ""
       }
-      font-black md:text-[100px] text-[90px]   ${className}`}
+      font-black md:text-[100px] text-[75px]   ${className}`}
     >
       {children}
     </span>
